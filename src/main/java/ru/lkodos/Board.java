@@ -19,6 +19,9 @@ public class Board {
              setPiece(new Coordinates(file, 2), new Pawn(Color.WHITE, new Coordinates(file, 2)));
              setPiece(new Coordinates(file, 7), new Pawn(Color.WHITE, new Coordinates(file, 7)));
          }
+     }
 
+     public static boolean isSquareDark(Coordinates coordinates) {
+         return ((coordinates.file.ordinal() + 1) + coordinates.rank) % 2 == 0;
      }
 }
